@@ -1,5 +1,5 @@
-def call(String sourceImage, String sourceTag, String targetImage, String targetTag) {
+def call(String imageName, String imageTag) {
     sh """
-        docker tag ${sourceImage}:${sourceTag} ${targetImage}:${targetTag}
+        docker build -t ${imageName}:${imageTag} .
     """
 }
