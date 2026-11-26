@@ -1,5 +1,5 @@
 def call(String imageName, String imageTag) {
     sh """
-        docker build -t ${imageName}:${imageTag} .
+        docker build -t ${imageName} .
     """
 }
